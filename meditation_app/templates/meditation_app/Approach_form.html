@@ -1,0 +1,160 @@
+{% extends 'meditation_app/base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    /* Pop-up Box-க்கான CSS */
+    .popup-container {
+        display: none; /* தொடக்கத்தில் பாப்-அப் மறைக்கப்பட்டிருக்கும் */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .popup-content {
+        background-color: #fef7f9;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        text-align: center;
+        max-width: 400px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    
+    .popup-content img {
+        margin-bottom: 1rem;
+        max-width: 100%; /* படத்தைப் பாப்-அப் பாக்ஸுக்குள் அடக்கமாக வைத்திருக்க */
+        height: auto;
+    }
+    
+    .popup-content h3 {
+        color: #5b3b61;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+    
+    .popup-content p {
+        color: #7f5d84;
+        margin-bottom: 1.5rem;
+    }
+    
+    .popup-content a {
+        color: #3b82f6; /* Tailwind blue-500 equivalent */
+        text-decoration: underline;
+    }
+</style>
+
+<main class="container mx-auto px-4 py-8">
+    <!-- Main Form Container -->
+    <div class="bg-[#fef7f9] rounded-3xl p-8 mb-8 shadow-lg max-w-4xl mx-auto">
+        <!-- Main Header -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-4 text-[#5b3b61] text-center">
+            How to Mentally Prepare for Fatherhood, According to a Parenting Coach
+        </h1>
+        <h2 class="text-2xl md:text-3xl font-bold mb-8 text-[#5b3b61] text-center">
+            Approach Form
+        </h2>
+        <!-- Form Section -->
+        <form class="space-y-6" id="approach-form" action="#" method="post">
+            {% csrf_token %} 
+            
+            <!-- First Name and Last Name -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label for="first-name" class="block text-gray-700 font-medium mb-1">First Name</label>
+                    <input type="text" id="first-name" name="first-name" class="w-full p-3 rounded-lg bg-[#e4d8e8] border border-[#d1b7d5] focus:outline-none focus:ring-2 focus:ring-[#b184bf]" placeholder="Enter your first name">
+                </div>
+                <div>
+                    <label for="last-name" class="block text-gray-700 font-medium mb-1">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" class="w-full p-3 rounded-lg bg-[#e4d8e8] border border-[#d1b7d5] focus:outline-none focus:ring-2 focus:ring-[#b184bf]" placeholder="Enter your last name">
+                </div>
+            </div>
+            
+            <!-- Other form fields -->
+            <div>
+                <label for="mobile-no" class="block text-gray-700 font-medium mb-1">Mobile No</label>
+                <input type="tel" id="mobile-no" name="mobile-no" class="w-full p-3 rounded-lg bg-[#e4d8e8] border border-[#d1b7d5] focus:outline-none focus:ring-2 focus:ring-[#b184bf]" placeholder="Enter your mobile number">
+            </div>
+
+            <div>
+                <label for="email-id" class="block text-gray-700 font-medium mb-1">E- Mail Id</label>
+                <input type="email" id="email-id" name="email-id" class="w-full p-3 rounded-lg bg-[#e4d8e8] border border-[#d1b7d5] focus:outline-none focus:ring-2 focus:ring-[#b184bf]" placeholder="Enter your email address">
+            </div>
+
+            <div>
+                <label for="therapy-day" class="block text-gray-700 font-medium mb-1">No. Of Therapy Day</label>
+                <select id="therapy-day" name="therapy-day" class="w-full p-3 rounded-lg bg-[#e4d8e8] border border-[#d1b7d5] focus:outline-none focus:ring-2 focus:ring-[#b184bf]">
+                    <option value="" disabled selected>Select number of days</option>
+                    <option value="1">1 Day</option>
+                    <option value="2">2 Days</option>
+                    <option value="3">3 Days</option>
+                </select>
+            </div>
+            
+            <div>
+                <label for="family-count" class="block text-gray-700 font-medium mb-1">Family Members Count</label>
+                <input type="number" id="family-count" name="family-count" class="w-full p-3 rounded-lg bg-[#e4d8e8] border border-[#d1b7d5] focus:outline-none focus:ring-2 focus:ring-[#b184bf]" placeholder="Enter number of family members">
+            </div>
+            
+            <div>
+                <label for="address" class="block text-gray-700 font-medium mb-1">Address</label>
+                <textarea id="address" name="address" rows="4" class="w-full p-3 rounded-lg bg-[#e4d8e8] border border-[#d1b7d5] focus:outline-none focus:ring-2 focus:ring-[#b184bf]" placeholder="Enter your full address"></textarea>
+            </div>
+
+            <div>
+                <label for="time-availability" class="block text-gray-700 font-medium mb-1">Time Availability</label>
+                <select id="time-availability" name="time-availability" class="w-full p-3 rounded-lg bg-[#e4d8e8] border border-[#d1b7d5] focus:outline-none focus:ring-2 focus:ring-[#b184bf]">
+                    <option value="" disabled selected>Select a time slot</option>
+                    <option value="morning">Morning (9 AM - 12 PM)</option>
+                    <option value="afternoon">Afternoon (1 PM - 5 PM)</option>
+                    <option value="evening">Evening (6 PM - 9 PM)</option>
+                </select>
+            </div>
+            
+            <div>
+                <label for="city" class="block text-gray-700 font-medium mb-1">Current City</label>
+                <input type="text" id="city" name="city" class="w-full p-3 rounded-lg bg-[#e4d8e8] border border-[#d1b7d5] focus:outline-none focus:ring-2 focus:ring-[#b184bf]" placeholder="Enter your current city">
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex justify-center pt-4">
+                <button type="button" id="submit-btn" class="w-full md:w-auto px-12 py-4 bg-[#5b3b61] text-white font-semibold rounded-full shadow-lg hover:bg-[#7f5d84] transition-colors">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</main>
+
+<!-- Pop-up Box-க்கான HTML -->
+<div id="popup-container" class="popup-container bg-[#ff6b6b]">
+    <div class="popup-content">
+        <img src="{% static '\images\form-submit.png' %}" alt="Family Therapy" class="mx-auto">
+        <h3 class="text-xl md:text-2xl">Your Approach Has been Accepted</h3>
+        <p class="text-sm md:text-base">Complete your Payment Process Quickly</p>
+        <!-- இந்த இணைப்பை உங்கள் கட்டணப் பக்கத்தின் URL-க்கு மாற்றவும் -->
+        <a href="{% url 'payment' %}" class="text-blue-500 font-medium">Click Here</a>
+        
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const submitButton = document.getElementById('submit-btn');
+        const popupContainer = document.getElementById('popup-container');
+        
+        // படிவம் சமர்ப்பிக்கப்படும்போது, பாப்-அப் பாக்ஸைக் காட்டுகிறது
+        submitButton.addEventListener('click', (e) => {
+            // படிவத்தின் action-ஐத் தடுக்கிறது, அதனால் நேரடியாக சமர்ப்பிக்கப்படாது
+            e.preventDefault(); 
+            popupContainer.style.display = 'flex';
+        });
+    });
+</script>
+
+{% endblock %}

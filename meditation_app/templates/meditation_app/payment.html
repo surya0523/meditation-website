@@ -1,0 +1,162 @@
+{% extends 'meditation_app/base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="container mx-auto px-4 py-8 max-w-4xl">
+    <!-- Main Payment Container -->
+    <div class="bg-[#fef7f9] rounded-3xl p-8 mb-8 shadow-lg">
+
+        <!-- Payment Details Section -->
+        <div class="bg-white rounded-2xl p-6 mb-8 shadow-md">
+            <h2 class="text-2xl font-bold text-[#5b3b61] mb-6 text-center">Payment Details</h2>
+            <div class="space-y-4">
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-700 font-medium">Therapist Fee Per Session</span>
+                    <span class="text-gray-900 font-semibold">Rs.2,500.00</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-700 font-medium">No. of Session 25</span>
+                    <span class="text-gray-900 font-semibold">Rs.62,500.00</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-700 font-medium">Vehicle Fees</span>
+                    <span class="text-gray-900 font-semibold">Rs.1,500.00</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-700 font-medium">Counselling Fees</span>
+                    <span class="text-gray-900 font-semibold">Rs.4,500.00</span>
+                </div>
+                <div class="flex justify-between items-center pt-4 border-t border-gray-200">
+                    <span class="text-xl font-bold text-[#5b3b61]">Total</span>
+                    <span class="text-xl font-bold text-[#5b3b61]">Rs.68,500.00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Method Section -->
+        <div class="bg-white rounded-2xl p-6 shadow-md">
+            <h2 class="text-2xl font-bold text-[#5b3b61] mb-6 text-center">Payment Method</h2>
+            <form id="paymentForm" class="space-y-6">
+                <!-- Payment Options with Checkboxes -->
+                <div class="flex items-center space-x-4">
+                    <input type="checkbox" id="debit-credit" name="payment-method" class="form-checkbox text-[#5b3b61] rounded-full w-5 h-5">
+                    <label for="debit-credit" class="text-lg font-medium text-gray-700">Debit/ Credit Card</label>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <input type="checkbox" id="upi" name="payment-method" class="form-checkbox text-[#5b3b61] rounded-full w-5 h-5">
+                    <label for="upi" class="text-lg font-medium text-gray-700">UPI</label>
+                </div>
+
+                <div class="grid grid-cols-1 gap-4 pl-8">
+                    <!-- Google Pay Icon - Using Inline SVG -->
+                    <div class="flex items-center space-x-4">
+                        <svg class="w-8 h-8 rounded-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="12" fill="#5B3B61"/>
+                            <path d="M12 18.25C15.4621 18.25 18.25 15.4621 18.25 12C18.25 8.5379 15.4621 5.75 12 5.75C8.5379 5.75 5.75 8.5379 5.75 12C5.75 15.4621 8.5379 18.25 12 18.25ZM12 16.5C9.48512 16.5 7.5 14.5149 7.5 12C7.5 9.48512 9.48512 7.5 12 7.5C14.5149 7.5 16.5 9.48512 16.5 12C16.5 14.5149 14.5149 16.5 12 16.5Z" fill="white"/>
+                        </svg>
+                        <input type="checkbox" id="google-pay" name="upi-method" class="form-checkbox text-[#5b3b61] rounded-full w-5 h-5">
+                        <label for="google-pay" class="text-base text-gray-700">Google Pay</label>
+                    </div>
+
+                    <!-- PhonePe Icon - Using Inline SVG -->
+                    <div class="flex items-center space-x-4">
+                        <svg class="w-8 h-8 rounded-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="12" fill="#5B3B61"/>
+                            <path d="M11.9961 17.551L11.9996 17.551C11.6661 17.9715 11.2335 18.3073 10.7412 18.5358C10.2488 18.7643 9.70995 18.8804 9.16709 18.8804H8.91924C8.44199 18.8804 7.97442 18.7845 7.53424 18.5989C7.09406 18.4132 6.6908 18.1396 6.34185 17.7907C5.9929 17.4417 5.71928 17.0385 5.53363 16.5983C5.34799 16.1581 5.25206 15.6906 5.25206 15.2133V9.22046L11.9961 17.551Z" fill="white"/>
+                            <path d="M12.0039 6.44896L12.0004 6.44896C12.3339 6.02845 12.7665 5.69265 13.2588 5.46417C13.7512 5.23568 14.2901 5.11964 14.8329 5.11964H15.0808C15.558 5.11964 16.0256 5.21557 16.4658 5.40121C16.9059 5.58686 17.3092 5.86048 17.6581 6.20943C18.0071 6.55838 18.2807 6.96164 18.4664 7.40182C18.652 7.842 18.7479 8.30957 18.7479 8.78682V14.7795L12.0039 6.44896Z" fill="white"/>
+                        </svg>
+                        <input type="checkbox" id="phone-pay" name="upi-method" class="form-checkbox text-[#5b3b61] rounded-full w-5 h-5">
+                        <label for="phone-pay" class="text-base text-gray-700">Phone Pay</label>
+                    </div>
+
+                    <!-- Paytm Icon - Using Inline SVG -->
+                    <div class="flex items-center space-x-4">
+                        <svg class="w-8 h-8 rounded-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="12" fill="#5B3B61"/>
+                            <path d="M12 16.5C14.4853 16.5 16.5 14.4853 16.5 12C16.5 9.51472 14.4853 7.5 12 7.5C9.51472 7.5 7.5 9.51472 7.5 12C7.5 14.4853 9.51472 16.5 12 16.5Z" fill="white"/>
+                        </svg>
+                        <input type="checkbox" id="paytm" name="upi-method" class="form-checkbox text-[#5b3b61] rounded-full w-5 h-5">
+                        <label for="paytm" class="text-base text-gray-700">Patym</label>
+                    </div>
+
+                    <!-- Amazon Pay Icon - Using Inline SVG -->
+                    <div class="flex items-center space-x-4">
+                        <svg class="w-8 h-8 rounded-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="12" fill="#5B3B61"/>
+                            <path d="M12 17.25C14.8995 17.25 17.25 14.8995 17.25 12C17.25 9.10051 14.8995 6.75 12 6.75C9.10051 6.75 6.75 9.10051 6.75 12C6.75 14.8995 9.10051 17.25 12 17.25Z" fill="white"/>
+                        </svg>
+                        <input type="checkbox" id="amazon-pay" name="upi-method" class="form-checkbox text-[#5b3b61] rounded-full w-5 h-5">
+                        <label for="amazon-pay" class="text-base text-gray-700">Amazon Pay</label>
+                    </div>
+
+                    <!-- WhatsApp Icon - Using Inline SVG -->
+                    <div class="flex items-center space-x-4">
+                        <svg class="w-8 h-8 rounded-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="12" fill="#5B3B61"/>
+                            <path d="M12.0002 4.00018C7.58197 4.00018 4.00018 7.58197 4.00018 12.0002C4.00018 13.9114 4.65431 15.6586 5.75018 17.0002L4.50018 20.0002L7.50018 18.7502C8.84177 19.846 10.589 20.5002 12.5002 20.5002C16.9184 20.5002 20.5002 16.9184 20.5002 12.5002C20.5002 8.08197 16.9184 4.50018 12.5002 4.50018C12.334 4.50018 12.1679 4.50018 12.0017 4.50018L12.0002 4.00018Z" fill="white"/>
+                        </svg>
+                        <input type="checkbox" id="whats-app" name="upi-method" class="form-checkbox text-[#5b3b61] rounded-full w-5 h-5">
+                        <label for="whats-app" class="text-base text-gray-700">Whats app</label>
+                    </div>
+                </div>
+
+                <!-- Confirm Payment Button -->
+                <div class="flex justify-center pt-6">
+                    <button type="button" id="confirmPaymentBtn" class="w-full px-12 py-4 bg-[#5b3b61] text-white font-semibold rounded-full shadow-lg hover:bg-[#7f5d84] transition-colors">
+                        Confirm Payment
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+<!-- Payment Success Modal Pop-up -->
+<div id="paymentSuccessModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full flex items-center justify-center z-50">
+    <div class="relative p-8 bg-white w-96 max-w-sm rounded-3xl shadow-lg transform transition-transform duration-300 scale-95">
+        <div class="text-center">
+            <!-- Thank You / Payment Success Title -->
+            <h3 class="text-2xl font-bold text-[#5b3b61] mb-4">Payment Success</h3>
+            <!-- Payment Success Image -->
+            <div class="flex justify-center mb-6">
+                <img src="{% static '\images\payment-sucess.png' %}" alt="Payment Success" class="rounded-full">
+            </div>
+            <!-- Message -->
+            <p class="text-gray-700 text-lg mb-6">Your Session starts Tomorrow</p>
+            <!-- Close Button / Redirect to Home -->
+            <button id="closeModalBtn" class="w-full px-4 py-2 bg-[#5b3b61] text-white font-semibold rounded-full hover:bg-[#7f5d84] transition-colors">
+                Close
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const confirmPaymentBtn = document.getElementById('confirmPaymentBtn');
+        const paymentSuccessModal = document.getElementById('paymentSuccessModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const paymentForm = document.getElementById('paymentForm');
+
+        confirmPaymentBtn.addEventListener('click', () => {
+            // 1. Save form data (in a real scenario, this would be an API call)
+            const formData = new FormData(paymentForm);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            console.log('Form data to be saved:', data); // Log the data for demonstration
+
+            // 2. Show the modal pop-up
+            paymentSuccessModal.classList.remove('hidden');
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            // 3. Hide the modal and redirect to the home page
+            paymentSuccessModal.classList.add('hidden');
+            window.location.href = "/"; // Change this to your actual home page URL
+        });
+    });
+</script>
+{% endblock %}

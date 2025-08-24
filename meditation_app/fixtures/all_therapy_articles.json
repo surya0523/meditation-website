@@ -1,0 +1,288 @@
+[
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 1,
+        "fields": {
+            "therapy_type": "Individual",
+            "title": "Finding Your Way Through Individual Therapy",
+            "description": "Individual therapy is a powerful tool for personal growth and healing. It provides a confidential space to explore your thoughts and feelings with a trained professional.",
+            "image": "therapy_articles/individual_therapy_1.jpg",
+            "reviewer": "Medically reviewed by Dr. Sarah - MD"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 2,
+        "fields": {
+            "therapy_type": "Individual",
+            "title": "Coping with Anxiety: A Guide to Individual Sessions",
+            "description": "Learn effective strategies for managing anxiety and stress in a one-on-one therapeutic setting. This guide helps you build resilience.",
+            "image": "therapy_articles/individual_therapy_2.jpg",
+            "reviewer": "Medically reviewed by Dr. John - Psychologist"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 3,
+        "fields": {
+            "therapy_type": "Individual",
+            "title": "Navigating Life Transitions with a Therapist",
+            "description": "Life's major changes, from career shifts to relocations, can be overwhelming. Individual therapy provides support during these transitional periods.",
+            "image": "therapy_articles/individual_therapy_3.jpg",
+            "reviewer": "Medically reviewed by Dr. Lisa - Therapist"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 4,
+        "fields": {
+            "therapy_type": "Individual",
+            "title": "Mindfulness Techniques for Personal Healing",
+            "description": "Discover how mindfulness and meditation can be integrated into your therapy sessions to help you stay present and reduce emotional distress.",
+            "image": "therapy_articles/individual_therapy_4.jpg",
+            "reviewer": "Medically reviewed by Dr. David - Counselor"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 5,
+        "fields": {
+            "therapy_type": "Individual",
+            "title": "Overcoming Self-Doubt and Boosting Self-Esteem",
+            "description": "Individual therapy can help you challenge negative self-talk and develop a stronger, more positive sense of self-worth.",
+            "image": "therapy_articles/individual_therapy_5.jpg",
+            "reviewer": "Medically reviewed by Dr. Maya - Psychotherapist"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 6,
+        "fields": {
+            "therapy_type": "Individual",
+            "title": "Strategies for Managing Depression and Finding Joy",
+            "description": "Explore personalized strategies to cope with symptoms of depression and rediscover a sense of purpose and happiness in your life.",
+            "image": "therapy_articles/individual_therapy_6.jpg",
+            "reviewer": "Medically reviewed by Dr. Emily - LCP"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 7,
+        "fields": {
+            "therapy_type": "Couples",
+            "title": "Building Stronger Bonds with Couples Therapy",
+            "description": "Couples therapy helps partners improve communication, resolve conflicts, and strengthen their emotional connection. It's a safe space to work through challenges together.",
+            "image": "therapy_articles/couples_therapy_1.jpg",
+            "reviewer": "Medically reviewed by Dr. John - Psychologist"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 8,
+        "fields": {
+            "therapy_type": "Couples",
+            "title": "Healing from Infidelity: A Path to Trust",
+            "description": "Infidelity can be a deeply painful experience. Couples therapy provides a framework for both partners to heal, rebuild trust, and decide on the future of their relationship.",
+            "image": "therapy_articles/couples_therapy_2.jpg",
+            "reviewer": "Medically reviewed by Dr. Karen - LMFT"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 9,
+        "fields": {
+            "therapy_type": "Couples",
+            "title": "Navigating Financial Stress Together",
+            "description": "Financial disagreements are a major source of conflict. Learn how to work as a team to create a budget and achieve your shared financial goals.",
+            "image": "therapy_articles/couples_therapy_3.jpg",
+            "reviewer": "Medically reviewed by Dr. Michael - Relationship Counselor"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 10,
+        "fields": {
+            "therapy_type": "Couples",
+            "title": "Improving Intimacy and Connection",
+            "description": "Reignite the spark in your relationship by exploring ways to improve emotional and physical intimacy. Therapy can help you reconnect on a deeper level.",
+            "image": "therapy_articles/couples_therapy_4.jpg",
+            "reviewer": "Medically reviewed by Dr. Laura - Therapist"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 11,
+        "fields": {
+            "therapy_type": "Couples",
+            "title": "Effective Communication for Partners",
+            "description": "Communication breakdowns are common. This article provides practical techniques and exercises to help you and your partner express yourselves clearly and listen effectively.",
+            "image": "therapy_articles/couples_therapy_5.jpg",
+            "reviewer": "Medically reviewed by Dr. Paul - LPC"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 12,
+        "fields": {
+            "therapy_type": "Couples",
+            "title": "Parenting as a Team: Shared Strategies",
+            "description": "Learn how to align your parenting styles and work together to raise happy, healthy children. Couples therapy can help you present a united front.",
+            "image": "therapy_articles/couples_therapy_6.jpg",
+            "reviewer": "Medically reviewed by Dr. Emily - MFT"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 13,
+        "fields": {
+            "therapy_type": "Group",
+            "title": "Connecting and Healing in Group Therapy",
+            "description": "Group therapy allows individuals to share experiences and receive support from others facing similar challenges. It fosters a sense of community and reduces feelings of isolation.",
+            "image": "therapy_articles/group_therapy_1.jpg",
+            "reviewer": "Medically reviewed by Dr. Lisa - Therapist"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 14,
+        "fields": {
+            "therapy_type": "Group",
+            "title": "Building Social Skills in a Supportive Group",
+            "description": "For those who struggle with social anxiety or building connections, group therapy offers a low-pressure environment to practice social skills and gain confidence.",
+            "image": "therapy_articles/group_therapy_2.jpg",
+            "reviewer": "Medically reviewed by Dr. David - Counselor"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 15,
+        "fields": {
+            "therapy_type": "Group",
+            "title": "Support Groups for Grief and Loss",
+            "description": "Grief is a journey best not traveled alone. Group therapy provides a compassionate space to share your story and receive validation and support from others who understand.",
+            "image": "therapy_articles/group_therapy_3.jpg",
+            "reviewer": "Medically reviewed by Dr. Susan - Psychologist"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 16,
+        "fields": {
+            "therapy_type": "Group",
+            "title": "Managing Stress Through a Group Approach",
+            "description": "Join a group to learn and practice stress-reduction techniques, such as progressive muscle relaxation and guided visualization, with the guidance of a therapist and the support of peers.",
+            "image": "therapy_articles/group_therapy_4.jpg",
+            "reviewer": "Medically reviewed by Dr. Ben - Therapist"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 17,
+        "fields": {
+            "therapy_type": "Group",
+            "title": "Finding Your Voice: Public Speaking Group Therapy",
+            "description": "Overcome your fear of public speaking in a small, supportive group setting. Practice speaking and receive constructive feedback in a safe environment.",
+            "image": "therapy_articles/group_therapy_5.jpg",
+            "reviewer": "Medically reviewed by Dr. Olivia - LCPC"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 18,
+        "fields": {
+            "therapy_type": "Group",
+            "title": "Support for Caregivers: A Group for Resilience",
+            "description": "Caregiving can be an emotional and physical burden. This group provides a space for caregivers to share their struggles and find strategies to maintain their own well-being.",
+            "image": "therapy_articles/group_therapy_6.jpg",
+            "reviewer": "Medically reviewed by Dr. Sam - Social Worker"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 19,
+        "fields": {
+            "therapy_type": "Online",
+            "title": "Accessible and Convenient Online Therapy",
+            "description": "Online therapy offers the flexibility and convenience of receiving mental health support from the comfort of your home. It's a great option for those with busy schedules or limited mobility.",
+            "image": "therapy_articles/online_therapy_1.jpg",
+            "reviewer": "Medically reviewed by Dr. Alex - LCSW"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 20,
+        "fields": {
+            "therapy_type": "Online",
+            "title": "Telehealth vs. In-Person Therapy: Which is Right for You?",
+            "description": "This article helps you compare the benefits and drawbacks of online and in-person therapy to make an informed decision that suits your needs and preferences.",
+            "image": "therapy_articles/online_therapy_2.jpg",
+            "reviewer": "Medically reviewed by Dr. Rachel - Therapist"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 21,
+        "fields": {
+            "therapy_type": "Online",
+            "title": "Getting the Most Out of Your Virtual Therapy Sessions",
+            "description": "Tips and tricks for preparing for your online therapy appointments, ensuring a secure and private session, and maximizing the effectiveness of the experience.",
+            "image": "therapy_articles/online_therapy_3.jpg",
+            "reviewer": "Medically reviewed by Dr. Chris - Counselor"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 22,
+        "fields": {
+            "therapy_type": "Online",
+            "title": "Online Therapy for Managing Stress and Burnout",
+            "description": "Discover how a digital approach to therapy can help you create a sustainable self-care routine and manage chronic stress from the comfort of your home or office.",
+            "image": "therapy_articles/online_therapy_4.jpg",
+            "reviewer": "Medically reviewed by Dr. Brian - Psychotherapist"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 23,
+        "fields": {
+            "therapy_type": "Online",
+            "title": "Online Group Therapy: Finding Your Digital Community",
+            "description": "Explore the benefits of connecting with others in a virtual group setting. Online group therapy offers a flexible way to receive support and share experiences.",
+            "image": "therapy_articles/online_therapy_5.jpg",
+            "reviewer": "Medically reviewed by Dr. Nicole - Therapist"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 24,
+        "fields": {
+            "therapy_type": "Online",
+            "title": "Privacy and Security in Online Therapy",
+            "description": "Understand the measures taken to ensure your confidentiality and privacy during virtual therapy sessions, so you can feel safe and secure.",
+            "image": "therapy_articles/online_therapy_6.jpg",
+            "reviewer": "Medically reviewed by Dr. Kevin - LCSW"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 25,
+        "fields": {
+            "therapy_type": "Couples",
+            "title": "Pre-Marital Counseling for a Strong Start",
+            "description": "Prepare for a healthy and fulfilling marriage by addressing potential issues before they arise. Pre-marital counseling helps you build a strong foundation for your future.",
+            "image": "therapy_articles/couples_therapy_7.jpg",
+            "reviewer": "Medically reviewed by Dr. Emily - LCP"
+        }
+    },
+    {
+        "model": "meditation_app.therapyarticle",
+        "pk": 26,
+        "fields": {
+            "therapy_type": "Couples",
+            "title": "Parenting with a Partner",
+            "description": "Learn to parent as a team and navigate the challenges of raising children together. Therapy can help you establish a united front and reduce conflict.",
+            "image": "therapy_articles/couples_therapy_8.jpg",
+            "reviewer": "Medically reviewed by Dr. Sam - Therapist"
+        }
+    }
+]

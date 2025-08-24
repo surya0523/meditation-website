@@ -1,0 +1,68 @@
+{% extends 'meditation_app/base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="container mx-auto px-4 py-8 max-w-4xl font-inter">
+
+    <!-- Hero Image Section -->
+    <div class="relative w-full rounded-3xl overflow-hidden shadow-lg mb-8">
+        <img src="{% static '\images\meditation_853x480.jpg-min.jpg' %}" alt="Contact Us Banner" class="w-full h-auto object-cover">
+        <div class="absolute inset-0 flex items-center  p-4">
+            <div class=" ">
+                <blockquote class="text-black  font-bold italic leading-tight">
+                    "Reach out — we're here to help you find your inner peace."
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="bg-white rounded-3xl p-8 shadow-lg flex flex-col md:flex-row gap-8">
+        <!-- Contact Information Column -->
+        <div class="md:w-1/2 space-y-8">
+            <div>
+                <h2 class="text-2xl font-bold text-[#5b3b61] mb-2">Contact DEE PLUS</h2>
+                <h3 class="text-xl font-semibold text-gray-700">Address:</h3>
+                <p class="text-gray-600">6, Hethendran Street,<br>Kongu Nagar,<br>Karur - 26</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold text-gray-700">Mobile No:</h3>
+                <p class="text-gray-600">+91 95321 22556</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold text-gray-700">E-Mail Id:</h3>
+                <p class="text-gray-600">deepluswell@gmail.com</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold text-gray-700">General Enquirers</h3>
+                <p class="text-gray-600">Got a general question? Please use this Contact Form to reach out to us.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold text-gray-700">Feedback</h3>
+                <p class="text-gray-600">Do you have something to say about The Guided Meditation Site? Feel free to give us your feedback via this Contact Form.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold text-gray-700">Opening Time</h3>
+                <p class="text-gray-600">Monday - Sunday<br>9.00 AM To 9.00PM</p>
+            </div>
+        </div>
+
+        <!-- Form Column -->
+        <div class="md:w-1/2">
+            <form action="#" method="POST" class="space-y-4">
+                <input type="text" name="name" placeholder="Name" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5b3b61]" required>
+                <input type="tel" name="mobile" placeholder="Mobile No" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5b3b61]" required>
+                <input type="email" name="email" placeholder="E-Mail" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5b3b61]" required>
+                <textarea name="message" rows="4" placeholder="Message" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#5b3b61]" required></textarea>
+                
+                <div class="flex items-center space-x-2">
+                    <input type="checkbox" id="robot" name="robot" class="h-4 w-4 text-[#5b3b61] rounded border-gray-300 focus:ring-[#5b3b61]">
+                    <label for="robot" class="text-gray-700">I am Not Robot</label>
+                </div>
+                
+                <button type="submit" class="w-full bg-[#5b3b61] text-white py-3 px-8 rounded-full text-lg font-semibold shadow-lg hover:bg-[#4b2f53] transition duration-300">Contact Us</button>
+            </form>
+        </div>
+    </div>
+</main>
+{% endblock %}

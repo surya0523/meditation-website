@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEE PLUS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0fdf4;
+            /* A light green to match the body background */
+        }
+
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #d1b7d5;
+            /* A slightly lighter purple for hover effect */
+        }
+
+        .footer-logo {
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+        }
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="flex flex-col min-h-screen bg-[#fff0f0] font-['Montserrat']">
+    <!-- Header/Navigation Bar -->
+    <header class="bg-[#b184bf] rounded-3xl m-4 p-4 flex items-center justify-between shadow-lg">
+        <div class="flex items-center">
+            <h1 class="text-[white] text-2xl font-bold tracking-tight">DEE<br>PLUS</h1>
+        </div>
+        <nav class="flex-grow flex justify-center space-x-8 text-[#5b3b61] font-medium ">
+            <a href="{% url 'home' %}" class="nav-link">Home</a>
+            <a href="{% url 'therapy' %}" class="hover:text-[#5b3b61] transition-all">Therapy</a>
+            <a href="{% url 'about' %}" class="nav-link">About Us</a>
+            <a href="{% url 'meditation' %}" class="nav-link">Meditation</a>
+            <a href="{% url 'contact' %}" class="nav-link">Contact Us</a>
+        </nav>
+        <div class="flex items-center space-x-4 text-xl">
+            <button class="text-[#5b3b61] hover:text-[#7f5d84] transition-colors"><i class="fas fa-search"></i></button>
+            <button class="text-[#5b3b61] hover:text-[#7f5d84] transition-colors"><i class="fas fa-user"></i></button>
+        </div>
+    </header>
+
+    <!-- Main Content Block -->
+    <main class="flex-grow container mx-auto p-4">
+        {% block content %}
+        <!-- Child templates will fill this block with their content -->
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#d1b7d5] rounded-3xl m-4 p-8 shadow-lg text-[#5b3b61] text-sm">
+        <div class="container mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+            <!-- Logo Section -->
+            <div class="col-span-2 md:col-span-1">
+                <div class="flex items-center mb-4">
+                    <h1 class="text-3xl font-bold tracking-tight footer-logo">DEE<br>PLUS</h1>
+                </div>
+            </div>
+
+            <!-- Links Sections -->
+            <div>
+                <h3 class="font-bold text-base mb-2">Home</h3>
+                <ul>
+                    <li><a href="#" class="hover:underline">Happiness Week</a></li>
+                    <li><a href="#" class="hover:underline">About Us</a></li>
+                    <li><a href="#" class="hover:underline">Contact Us</a></li>
+                    <li><a href="#" class="hover:underline">Course</a></li>
+                    <li><a href="#" class="hover:underline">Meditation</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-base mb-2">Quick links</h3>
+                <ul>
+                    <li><a href="#" class="hover:underline">FAQ</a></li>
+                    <li><a href="#" class="hover:underline">Terms & Conditions</a></li>
+                    <li><a href="#" class="hover:underline">Help Center</a></li>
+                    <li><a href="#" class="hover:underline">Partnership</a></li>
+                </ul>
+            </div>
+
+            <!-- Opening Time Section -->
+            <div>
+                <h3 class="font-bold text-base mb-2">Opening Time</h3>
+                <p>Monday - Sunday</p>
+                <p>9.00 AM To 9.00PM</p>
+            </div>
+
+            <!-- Contact Section -->
+            <div>
+                <h3 class="font-bold text-base mb-2">Contact:</h3>
+                <p><i class="fas fa-map-marker-alt mr-2"></i>6, Hethendran Street, Kongu Nagar, Karur - 26</p>
+                <p class="mt-2"><i class="fas fa-phone-alt mr-2"></i>+9532 32556</p>
+                <p class="mt-2"><i class="fas fa-envelope mr-2"></i>deepluswell@gmail.com</p>
+            </div>
+        </div>
+        <div class="mt-8 flex justify-center items-center">
+            <!-- Placeholder for the small human image in the footer -->
+            <div class="w-12 h-12 bg-gray-400 rounded-full overflow-hidden">
+                <img src="https://placehold.co/48x48/d1b7d5/5b3b61?text=🧘" alt="Human meditating"
+                    class="w-full h-full object-cover">
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

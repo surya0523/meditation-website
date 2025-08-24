@@ -1,0 +1,136 @@
+{% extends 'meditation_app/base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="container mx-auto px-4 py-8 max-w-4xl font-inter">
+    <!-- Main Title Section -->
+    <div class="text-center my-8">
+        <h1 class="text-3xl font-bold text-[#5b3b61]">Discover popular meditations.</h1>
+    </div>
+
+    <!-- Meditation List -->
+    <div class="space-y-6">
+
+        <!-- Meditation Item 1 -->
+        <div class="bg-white rounded-3xl p-6 shadow-lg flex items-start space-x-4">
+            <div class="relative w-24 h-24 flex-shrink-0">
+                <img src="{% static '\images\v-1.jpg' %}" alt="Pascal Auclair" class="rounded-2xl w-full h-full object-cover">
+                <button class="absolute inset-0 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-circle text-white bg-gray-800 bg-opacity-60 rounded-full"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                </button>
+            </div>
+            <div class="flex-grow">
+                <h3 class="text-sm font-semibold text-gray-500">Pascal Auclair</h3>
+                <h2 class="text-xl font-bold text-[#5b3b61] my-1">Rediscover the Familiar</h2>
+                <p class="text-sm text-gray-700 leading-relaxed">
+                    This is the first time you've ever been here, now. Pascal invites you to discover the vivid and mysterious experience of this new moment.
+                </p>
+                <div class="flex items-center space-x-2 mt-4">
+                    <div class="w-full bg-gray-200 h-1 rounded-full overflow-hidden">
+                        <div class="bg-[#5b3b61] h-full w-1/2 rounded-full"></div>
+                    </div>
+                    <span class="text-gray-500 text-sm">5:00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Meditation Item 2 -->
+        <div class="bg-white rounded-3xl p-6 shadow-lg flex items-start space-x-4">
+            <div class="relative w-24 h-24 flex-shrink-0">
+                <img src="{% static '\images\v2.jpg' %}" alt="Alexis Santos" class="rounded-2xl w-full h-full object-cover">
+                <button class="absolute inset-0 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-circle text-white bg-gray-800 bg-opacity-60 rounded-full"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                </button>
+            </div>
+            <div class="flex-grow">
+                <h3 class="text-sm font-semibold text-gray-500">Alexis Santos</h3>
+                <h2 class="text-xl font-bold text-[#5b3b61] my-1">Natural mindful walking meditation</h2>
+                <p class="text-sm text-gray-700 leading-relaxed">
+                    Taking a relaxed walk mindfully will soothe the nervous system, get you outside, and can refresh you mentally when you're feeling low or off.
+                </p>
+                <div class="flex items-center space-x-2 mt-4">
+                    <div class="w-full bg-gray-200 h-1 rounded-full overflow-hidden">
+                        <div class="bg-[#5b3b61] h-full w-1/2 rounded-full"></div>
+                    </div>
+                    <span class="text-gray-500 text-sm">12:00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Meditation Item 3 -->
+        <div class="bg-white rounded-3xl p-6 shadow-lg flex items-start space-x-4">
+            <div class="relative w-24 h-24 flex-shrink-0">
+                <img src="{% static '\images\v3.jpg' %}" alt="Sharon Salzberg" class="rounded-2xl w-full h-full object-cover">
+                <button class="absolute inset-0 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-circle text-white bg-gray-800 bg-opacity-60 rounded-full"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                </button>
+            </div>
+            <div class="flex-grow">
+                <h3 class="text-sm font-semibold text-gray-500">Sharon Salzberg</h3>
+                <h2 class="text-xl font-bold text-[#5b3b61] my-1">Being with Big Emotions</h2>
+                <p class="text-sm text-gray-700 leading-relaxed">
+                    Bring an open minded curiosity to your big emotions and get to know yourself more fully, developing resilience to deal with all the feels.
+                </p>
+                <div class="flex items-center space-x-2 mt-4">
+                    <div class="w-full bg-gray-200 h-1 rounded-full overflow-hidden">
+                        <div class="bg-[#5b3b61] h-full w-1/2 rounded-full"></div>
+                    </div>
+                    <span class="text-gray-500 text-sm">9:50</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Meditation Item 4 -->
+        <div class="bg-white rounded-3xl p-6 shadow-lg flex items-start space-x-4">
+            <div class="relative w-24 h-24 flex-shrink-0">
+                <img src="{% static '\images\v4.jpg' %}" alt="Joseph Goldstein" class="rounded-2xl w-full h-full object-cover">
+                <button class="absolute inset-0 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-circle text-white bg-gray-800 bg-opacity-60 rounded-full"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                </button>
+            </div>
+            <div class="flex-grow">
+                <h3 class="text-sm font-semibold text-gray-500">Joseph Goldstein</h3>
+                <h2 class="text-xl font-bold text-[#5b3b61] my-1">Balanced Compassion</h2>
+                <p class="text-sm text-gray-700 leading-relaxed">
+                    We're living in challenging times. Try practicing balance, letting you open to the suffering of the world without becoming overwhelmed.
+                </p>
+                <div class="flex items-center space-x-2 mt-4">
+                    <div class="w-full bg-gray-200 h-1 rounded-full overflow-hidden">
+                        <div class="bg-[#5b3b61] h-full w-1/2 rounded-full"></div>
+                    </div>
+                    <span class="text-gray-500 text-sm">7:00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Meditation Item 5 -->
+        <div class="bg-white rounded-3xl p-6 shadow-lg flex items-start space-x-4">
+            <div class="relative w-24 h-24 flex-shrink-0">
+                <img src="{% static '\images\v5.jpg' %}" alt="Sebene Selassie" class="rounded-2xl w-full h-full object-cover">
+                <button class="absolute inset-0 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-circle text-white bg-gray-800 bg-opacity-60 rounded-full"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                </button>
+            </div>
+            <div class="flex-grow">
+                <h3 class="text-sm font-semibold text-gray-500">Sebene Selassie</h3>
+                <h2 class="text-xl font-bold text-[#5b3b61] my-1">Self-kindness for stress</h2>
+                <p class="text-sm text-gray-700 leading-relaxed">
+                    Showing self-compassion to ourselves in hard times bolsters our resilience, so we can learn from setbacks rather than getting stuck in rumination.
+                </p>
+                <div class="flex items-center space-x-2 mt-4">
+                    <div class="w-full bg-gray-200 h-1 rounded-full overflow-hidden">
+                        <div class="bg-[#5b3b61] h-full w-1/2 rounded-full"></div>
+                    </div>
+                    <span class="text-gray-500 text-sm">12:09</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Get 14 Days Free Trial Button -->
+    <div class="text-center my-12">
+        <button class="bg-black text-white py-3 px-8 rounded-full text-lg font-semibold shadow-lg">Get 14 Days Free Trial</button>
+    </div>
+</main>
+{% endblock %}

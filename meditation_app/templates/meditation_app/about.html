@@ -1,0 +1,98 @@
+
+{% extends 'meditation_app/base.html' %}
+{% load static %}
+
+{% block content %}
+    <main class="container mx-auto px-4 py-8 max-w-7xl">
+        <!-- About DEE PLUS Section -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-purple-dark">About DEE PLUS</h1>
+        </div>
+    
+        <!-- Mission Section with Image -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+            <div class="relative w-full h-80 lg:h-96 rounded-3xl overflow-hidden shadow-lg">
+                <img src="{% static '\images\mindfulness-and-nature.jpg' %}" alt="A person meditating" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div class="bg-white rounded-3xl p-8 shadow-lg">
+                <h2 class="text-2xl font-bold text-purple-dark mb-4">Our Mission</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    Our mission is to provide a valuable resource of information and downloads to people who want to evolve mentally, emotionally and spiritually, and to help people become healthier, happier and more peaceful.
+                </p>
+            </div>
+        </div>
+    
+        <!-- Who we are & What we do & How we do it Sections -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 my-12">
+            <div class="col-span-2">
+                <div class="bg-white rounded-3xl p-8 shadow-lg mb-8">
+                    <h2 class="text-2xl font-bold text-purple-dark mb-4">Who we are</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        Think of DEE PLUS as your lifelong guide to better mental health. We're here for you whenever you need us, wherever you are, helping you get through tough times and find joy in every day.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-col gap-8">
+                    <div class="bg-white rounded-3xl p-8 shadow-lg">
+                        <h2 class="text-2xl font-bold text-purple-dark mb-4">What we do</h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            Through evidence-based meditation and mindfulness tools, mental health coaching, therapy, psychiatry, Headspace helps you create life-changing habits to support your mental health and find a healthier, happier you.
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-3xl p-8 shadow-lg">
+                        <h2 class="text-2xl font-bold text-purple-dark mb-4">How we do it</h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            Our four values inform our decisions and how we operate day-to-day: put members first; bring a beginner's mind; seek truth, speak truth; embrace ownership.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col items-center space-y-8">
+                <img src="{% static '\images\download.jfif' %}" alt="Placeholder image 1" class="rounded-3xl shadow-lg w-full max-w-[250px]">
+                <img src="{% static '\images\download (1).jfif' %}" alt="Placeholder image 2" class="rounded-3xl shadow-lg w-full max-w-[250px]">
+                <img src="{% static '\images\meditation-at-sunset-silhouette-with-sea-and-sky-art-for-relaxation-and-mindfulness-vector.jpg' %}" alt="Placeholder image 3" class="rounded-3xl shadow-lg w-full max-w-[250px]">
+            </div>
+        </div>
+    
+        <!-- Meet DEE PLUS Teachers Section -->
+        <div class="text-center my-16">
+            <h2 class="text-3xl font-bold text-purple-dark">Meet DEE PLUS Teachers</h2>
+        </div>
+    
+        <!-- Teachers Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Kessonga Card -->
+            <div class="bg-white rounded-3xl p-6 shadow-lg text-center flex flex-col items-center">
+                <img src="{% static '\images\Screenshot7.png' %}" alt="Kessonga" class="rounded-full mx-auto mb-4 w-32 h-32 object-cover">
+                <h3 class="text-xl font-semibold text-purple-dark mb-2">Kessonga</h3>
+                <p class="text-sm text-gray-700">
+                    Kessonga is a meditation teacher, therapist, and acupuncturist who has worked with populations of all ages and backgrounds.
+                </p>
+            </div>
+            <!-- Andy Card -->
+            <div class="bg-white rounded-3xl p-6 shadow-lg text-center flex flex-col items-center">
+                <img src="{% static '\images\Screenshot6.png' %}" alt="Andy" class="rounded-full mx-auto mb-4 w-32 h-32 object-cover">
+                <h3 class="text-xl font-semibold text-purple-dark mb-2">Andy</h3>
+                <p class="text-sm text-gray-700">
+                    A former Buddhist monk and co-founder of the DEE PLUS app, Andy has guided people in meditation for over 20 years.
+                </p>
+            </div>
+            <!-- Eve Card -->
+            <div class="bg-white rounded-3xl p-6 shadow-lg text-center flex flex-col items-center">
+                <img src="{% static '\images\Screenshot5.png' %}" alt="Eve" class="rounded-full mx-auto mb-4 w-32 h-32 object-cover">
+                <h3 class="text-xl font-semibold text-purple-dark mb-2">Eve</h3>
+                <p class="text-sm text-gray-700">
+                    Eve has been with DEE PLUS since the beginning, teaching mindfulness and overseeing our meditation curriculum.
+                </p>
+            </div>
+            <!-- Dora Card -->
+            <div class="bg-white rounded-3xl p-6 shadow-lg text-center flex flex-col items-center">
+                <img src="{% static '\images\Screenshot4.png' %}" alt="Dora" class="rounded-full mx-auto mb-4 w-32 h-32 object-cover">
+                <h3 class="text-xl font-semibold text-purple-dark mb-2">Dora</h3>
+                <p class="text-sm text-gray-700">
+                    Dora is a meditation teacher and former psychiatrist's assistant who is passionate about the healing power of connection and community.
+                </p>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+   

@@ -1,0 +1,62 @@
+[
+    {
+        "model": "meditation_app.familytherapyarticle",
+        "pk": 1,
+        "fields": {
+            "title": "Understanding 'Family Of Origin' Work in Therapy",
+            "description": "Family issues can be one of the biggest mental health stressors in a person's life. Seeking help through family therapy can be an important step toward healing for you and your loved ones.",
+            "image": "family_therapy_articles/family_of_origin.jpg",
+            "reviewer": "Medically reviewed by Rotary- LCP"
+        }
+    },
+    {
+        "model": "meditation_app.familytherapyarticle",
+        "pk": 2,
+        "fields": {
+            "title": "How structural Family Therapy Works",
+            "description": "Family issues can be one of the biggest mental health stressors in a person's life. Seeking help through family therapy can be an important step toward healing for you and your loved ones.",
+            "image": "family_therapy_articles/structural_family_therapy.jpg",
+            "reviewer": "Medically reviewed by Carno- MD"
+        }
+    },
+    {
+        "model": "meditation_app.familytherapyarticle",
+        "pk": 3,
+        "fields": {
+            "title": "What to Know About Internal Family System (IFS) Therapy",
+            "description": "Family issues can be one of the biggest mental health stressors in a person's life. Seeking help through family therapy can be an important step toward healing for you and your loved ones.",
+            "image": "family_therapy_articles/internal_family_system.jpg",
+            "reviewer": "Medically reviewed by Rotary- MD"
+        }
+    },
+    {
+        "model": "meditation_app.familytherapyarticle",
+        "pk": 4,
+        "fields": {
+            "title": "What is Filial Therapy?",
+            "description": "Family issues can be one of the biggest mental health stressors in a person's life. Seeking help through family therapy can be an important step toward healing for you and your loved ones.",
+            "image": "family_therapy_articles/filial_therapy.jpg",
+            "reviewer": "Medically reviewed by Rotary- LCP"
+        }
+    },
+    {
+        "model": "meditation_app.familytherapyarticle",
+        "pk": 5,
+        "fields": {
+            "title": "Parent - Child Interaction Therapy",
+            "description": "Family issues can be one of the biggest mental health stressors in a person's life. Seeking help through family therapy can be an important step toward healing for you and your loved ones.",
+            "image": "family_therapy_articles/parent_child_interaction.jpg",
+            "reviewer": "Medically reviewed by Rotary- LCP"
+        }
+    },
+    {
+        "model": "meditation_app.familytherapyarticle",
+        "pk": 6,
+        "fields": {
+            "title": "How to Mentally Prepare For Motherhood, According to Parenting Coach",
+            "description": "Family issues can be one of the biggest mental health stressors in a person's life. Seeking help through family therapy can be an important step toward healing for you and your loved ones.",
+            "image": "family_therapy_articles/motherhood.jpg",
+            "reviewer": "Medically reviewed by Rotary- LCP"
+        }
+    }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "model": "meditation_app.Therapy",
+    "fields": {
+      "title": "Individual Therapy",
+      "description": "A specialized healthcare facility offering confidential, personalized mental health services, including psychiatric evaluations, medication management, and psychotherapy. Designed to provide discreet, compassionate care for individuals seeking support for emotional, behavioral, or psychological challenges.",
+      "image_url": "https://placehold.co/400x400/d1b7d5/5b3b61?text=Individual+Therapy"
+    }
+  },
+  {
+    "model": "meditation_app.Therapy",
+    "fields": {
+      "title": "Couples Therapy",
+      "description": "A specialized healthcare facility offering confidential, personalized mental health services, including psychiatric evaluations, medication management, and psychotherapy. Designed to provide discreet, compassionate care for individuals seeking support for emotional, behavioral, or psychological challenges.",
+      "image_url": "https://placehold.co/400x400/d1b7d5/5b3b61?text=Couples+Therapy"
+    }
+  },
+  {
+    "model": "meditation_app.Therapy",
+    "fields": {
+      "title": "Group Therapy",
+      "description": "A specialized healthcare facility offering confidential, personalized mental health services, including psychiatric evaluations, medication management, and psychotherapy. Designed to provide discreet, compassionate care for individuals seeking support for emotional, behavioral, or psychological challenges.",
+      "image_url": "https://placehold.co/400x400/d1b7d5/5b3b61?text=Group+Therapy"
+    }
+  },
+  {
+    "model": "meditation_app.TeamMember",
+    "fields": {
+      "name": "Jansi Merry",
+      "title": "Clinical Director / Psychologist",
+      "image_url": "https://placehold.co/200x200/d1b7d5/5b3b61?text=Jansi+Merry"
+    }
+  },
+  {
+    "model": "meditation_app.TeamMember",
+    "fields": {
+      "name": "Rizza",
+      "title": "Psychologist",
+      "image_url": "https://placehold.co/200x200/d1b7d5/5b3b61?text=Rizza"
+    }
+  },
+  {
+    "model": "meditation_app.TeamMember",
+    "fields": {
+      "name": "John Smith",
+      "title": "Clinical Director / Psychologist",
+      "image_url": "https://placehold.co/200x200/d1b7d5/5b3b61?text=John+Smith"
+    }
+  },
+  {
+    "model": "meditation_app.TeamMember",
+    "fields": {
+      "name": "Brady John",
+      "title": "Psychologist",
+      "image_url": "https://placehold.co/200x200/d1b7d5/5b3b61?text=Brady+John"
+    }
+  },
+  {
+    "model": "meditation_app.Testimonial",
+    "fields": {
+      "client_name": "Test Client 1",
+      "testimonial_text": "Working with Dee Plus has been a transformative experience. I feel more centered and calm.",
+      "client_image_url": "https://placehold.co/100x100/d1b7d5/5b3b61?text=Client+1"
+    }
+  },
+  {
+    "model": "meditation_app.Testimonial",
+    "fields": {
+      "client_name": "Test Client 2",
+      "testimonial_text": "The therapists are incredibly supportive and knowledgeable. My anxiety has significantly reduced.",
+      "client_image_url": "https://placehold.co/100x100/d1b7d5/5b3b61?text=Client+2"
+    }
+  },
+  {
+    "model": "meditation_app.FAQ",
+    "fields": {
+      "question": "How do I know if I need therapy?",
+      "answer": "If you're feeling overwhelmed, anxious, low, or stuck—or simply want to better understand yourself—therapy can help. You don't need a crisis to benefit from mental health support."
+    }
+  },
+  {
+    "model": "meditation_app.FAQ",
+    "fields": {
+      "question": "What is mental wellness?",
+      "answer": "Mental wellness is an active process of being aware and making choices toward a healthy and fulfilling life. It is more than just the absence of mental illness—it's about building resilience and finding balance."
+    }
+  },
+  {
+    "model": "meditation_app.FAQ",
+    "fields": {
+      "question": "What types of therapy do you offer?",
+      "answer": "We offer a range of services including individual therapy, couples therapy, group therapy, family therapy, and online therapy."
+    }
+  },
+  {
+    "model": "meditation_app.FAQ",
+    "fields": {
+      "question": "What can I expect in a therapy session?",
+      "answer": "A therapy session is a confidential space where you can talk openly with a trained professional. You can expect to explore your thoughts and feelings, learn new coping strategies, and work towards your personal goals."
+    }
+  }
+]

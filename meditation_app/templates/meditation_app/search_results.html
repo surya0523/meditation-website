@@ -1,0 +1,31 @@
+{% extends 'meditation_app/base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="container mx-auto px-4 py-8 max-w-4xl font-inter">
+    <div class="text-center my-8">
+        {% if query %}
+            <h1 class="text-3xl font-bold text-[#5b3b61]">Search Results for "{{ query }}"</h1>
+        {% else %}
+            <h1 class="text-3xl font-bold text-[#5b3b61]">Search</h1>
+        {% endif %}
+    </div>
+
+    {% if results %}
+        <div class="space-y-6">
+            {% for result in results %}
+            <div class="bg-white rounded-3xl p-6 shadow-lg">
+                <h2 class="text-xl font-bold text-[#5b3b61] mb-2">
+                    <a href="{% url result.page %}" class="hover:underline">{{ result.title }}</a>
+                </h2>
+                <p class="text-gray-700 leading-relaxed">{{ result.content }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="text-center text-gray-500 mt-12">
+            <p>No results found for "{{ query }}".</p>
+        </div>
+    {% endif %}
+</main>
+{% endblock %}

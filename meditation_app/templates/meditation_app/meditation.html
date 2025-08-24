@@ -1,0 +1,78 @@
+{% extends 'meditation_app/base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="container mx-auto px-4 py-8 max-w-7xl font-inter">
+    <!-- Main Title Section -->
+    <div class="text-center my-8">
+        <h1 class="text-4xl font-bold text-[#5b3b61]">Meditation</h1>
+    </div>
+
+    <!-- Start Free Trial Button -->
+    <div class="text-center my-6">
+        <!-- Link to the discover-popular-meditations page -->
+        <a href="{% url 'discover_popular_meditations' %}" class="inline-block bg-black text-white py-3 px-8 rounded-full text-lg font-semibold shadow-lg">Start Your Free Trial</a>
+    </div>
+
+    <!-- Featured Meditation Section -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 my-12 items-center">
+        <div class="bg-white rounded-3xl p-8 shadow-lg">
+            <p class="text-[#5b3b61] font-semibold text-sm">Featured Meditation</p>
+            <h2 class="text-3xl font-bold text-[#5b3b61] mt-2">Sleep Meditation</h2>
+            <div class="w-full mt-6">
+                <!-- Use a placeholder image or a static image here -->
+                <img src="{%static 'istockphoto-1365223878-612x612.jpg' %}" alt="A person meditating to sleep" class="w-full rounded-2xl shadow-lg">
+            </div>
+            <div class="mt-8">
+                <!-- Link to the discover-popular-meditations page -->
+                <a href="{% url 'discover_popular_meditations' %}" class="w-full text-center block bg-black text-white py-3 px-8 rounded-full text-lg font-semibold shadow-lg">Start Your Free Trial</a>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-8 shadow-lg flex flex-col items-center">
+            <!-- Video Player / Image -->
+            <div class="relative w-full rounded-2xl overflow-hidden shadow-lg mb-4">
+                <!-- Use a placeholder image or a static image for the video preview -->
+                <img src="{%static '\images\istockphoto-1365223878-612x612.jpg' %}" alt="Meditation Video Placeholder" class="w-full h-auto">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <button class="bg-gray-800 bg-opacity-50 text-white rounded-full p-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Audio Controls -->
+            <div class="w-full mt-4">
+                <p class="text-lg font-semibold text-center text-[#5b3b61] mb-2">Soothe Anxiety to Sleep</p>
+                <div class="flex items-center space-x-2">
+                    <span class="text-gray-500 text-sm">0:00</span>
+                    <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-[#5b3b61] h-full w-1/2 rounded-full"></div>
+                    </div>
+                    <span class="text-gray-500 text-sm">30:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Daily Themes Section -->
+    <div class="text-center my-16">
+        <h3 class="text-2xl font-bold text-[#5b3b61] mb-6">Daily Themes <span class="text-gray-500 text-lg">(5-10 minutes each)</span></h3>
+        <ul class="space-y-6 text-gray-700 max-w-2xl mx-auto leading-relaxed">
+            <li><strong class="font-semibold text-[#5b3b61]">Day 1 - Gratitude</strong><br>
+                Focus on 3 things you're thankful for. Feel the warmth they bring.</li>
+            <li><strong class="font-semibold text-[#5b3b61]">Day 2 - Loving-Kindness</strong><br>
+                Silently repeat: "May I be happy, May others be happy."</li>
+            <li><strong class="font-semibold text-[#5b3b61]">Day 3 - Present Moment Joy</strong><br>
+                Mindfully notice small joys - breath, light, sound - with full attention.</li>
+            <li><strong class="font-semibold text-[#5b3b61]">Day 4 - Smile Meditation</strong><br>
+                Gently smile while breathing slowly. Let the feeling of ease spread.</li>
+            <li><strong class="font-semibold text-[#5b3b61]">Day 5 - Positive Memories</strong><br>
+                Recall a joyful moment. Re-experience it with all your senses.</li>
+            <li><strong class="font-semibold text-[#5b3b61]">Day 6 - Self-Compassion</strong><br>
+                Send kindness to yourself. Affirm: "I am enough. I deserve joy."</li>
+            <li><strong class="font-semibold text-[#5b3b61]">Day 7 - Intentional Joy</strong><br>
+                Visualize a joyful life. Imagine waking up smiling, living freely.</li>
+        </ul>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'meditation_app/base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="container mx-auto px-4 py-8">
+    <!-- Hero Section -->
+    <div class="bg-[#e4d8e8] rounded-3xl p-8 mb-8 shadow-lg">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-[#5b3b61] text-center">Family Therapy</h1>
+        <div class="w-full text-center text-gray-700 text-lg leading-relaxed max-w-2xl mx-auto">
+            <p class="mb-4">
+                Family issues can be one of the biggest mental health stressors in a person's life. Seeking help through family therapy can be an important step toward healing for you and your loved ones.
+            </p>
+        </div>
+    </div>
+
+    <!-- Article Cards Section -->
+    <div class="bg-[#fef7f9] rounded-3xl p-8 mb-8 shadow-lg">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-10 text-[#5b3b61]">Articles</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {% for article in articles %}
+            <div class="bg-white rounded-3xl p-6 shadow-lg overflow-hidden flex flex-col items-center text-center">
+                <img src="{{ article.image.url }}" alt="{{ article.title }}" class="w-full h-64 object-cover rounded-2xl mb-4">
+                <h3 class="text-2xl font-semibold mb-2 text-[#5b3b61]">{{ article.title }}</h3>
+                <p class="text-gray-700 mb-4">{{ article.description|truncatewords:20 }}</p>
+                <!-- Changed button to a link and added href -->
+                <a href="{% url 'approach_form' %}" class="bg-[#b184bf] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#7f5d84] transition-colors mb-4">
+                    I Get This
+                </a>
+                <p class="text-gray-500 text-sm italic">{{ article.reviewer }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</main>
+{% endblock %}

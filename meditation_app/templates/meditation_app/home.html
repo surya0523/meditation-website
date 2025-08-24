@@ -1,0 +1,401 @@
+{% extends 'meditation_app/base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <div class="relative w-full h-[500px] mb-8 overflow-hidden rounded-3xl">
+        <img src="{% static '\images\1920_whatare10benefitsofmeditation.jpg' %}" alt="Meditation at Sunset" class="absolute inset-0 w-full h-full object-cover rounded-3xl">
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#f0fdf4] opacity-80 rounded-3xl"></div>
+        <div class="absolute bottom-10 right-10">
+            <a href="{% url 'therapy' %}"  class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:from-purple-600 hover:to-indigo-600 transition-all">Join Now</a>
+            
+        </div>
+    </div>
+
+    <!-- What DEE PLUS Stands For Section -->
+    <div class="bg-gray-50 rounded-3xl p-8 mb-8 flex flex-col md:flex-row items-center justify-between">
+        
+        <div class="w-full md:w-1/2 p-4">
+            <h2 class="text-3xl font-bold mb-4 text-[#5b3b61] text-center">What DEE PLUS <span class="text-[#d1b7d5]">Stands For</span></h2>
+            <div class="space-y-4 text-gray-700">
+                <p><strong class="text-[#5b3b61]">M</strong>indfulness: Being aware of the present</p>
+                <p><strong class="text-[#5b3b61]">E</strong>quanimity: Calm and balanced emotions</p>
+                <p><strong class="text-[#5b3b61]">D</strong>iscipline: Consistency in practice</p>
+                <p><strong class="text-[#5b3b61]">I</strong>nner Peace: A state of deep tranquility</p>
+                <p><strong class="text-[#5b3b61]">T</strong>ranquility: Soothing the restless mind</p>
+                <p><strong class="text-[#5b3b61]">A</strong>wareness: Conscious observation without reaction</p>
+                <p><strong class="text-[#5b3b61]">T</strong>ransformation: Gradual personal growth</p>
+                <p><strong class="text-[#5b3b61]">I</strong>ntention: Clarity of purpose</p>
+                <p><strong class="text-[#5b3b61]">O</strong>bservation: Watching thoughts without control</p>
+                <p><strong class="text-[#5b3b61]">N</strong>ow: Anchoring yourself in the present moment</p>
+            </div>
+        </div>
+        <div class="w-full md:w-1/2 p-4 flex flex-col items-center">
+            <div class="relative w-full h-full">
+                <img src="{% static '\images\a-man-practicing-yoga-in-lotus-pose-chakras-enlightenment-zen-meditation-vector.jpg' %}" alt="Meditation Symbol" class="w-2/3 mx-auto h-auto">
+                <h3 class="text-3xl font-bold mt-4 text-[#5b3b61] text-center">In Therapy Helps With</h3>
+                <ul class="list-none mt-2 text-gray-700 text-center">
+                    <li>Reducing stress and anxiety</li>
+                    <li>Enhancing focus and clarity</li>
+                    <li>Improving emotional regulation</li>
+                    <li>Promoting self-awareness</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Private Psychiatry & Therapy Clinic Section -->
+    <div class="bg-white rounded-3xl p-8 mb-2 flex flex-col md:flex-row items-center shadow-lg">
+        <div class="w-full md:w-1/2 p-4">
+            <img src="{% static '\images\istockphoto-1445245272-612x612.jpg' %}" alt="Private Clinic" class="rounded-3xl object-cover w-full h-auto">
+        </div>
+        <div class="w-full md:w-1/2 p-4">
+            <h3 class="text-gray-500 text-sm mb-2">Welcome to</h3>
+            <h2 class="text-4xl font-bold mb-4 text-[#5b3b61]">Private Psychiatry & Therapy Clinic</h2>
+            <p class="text-gray-700 mb-6">A specialized healthcare facility offering confidential, personalized mental health services, including psychiatric evaluations, medication management, and psychotherapy. Designed to provide discreet, compassionate care for individuals seeking support for emotional, behavioral, or psychological challenges.</p>
+            <a href="{% url 'therapy' %}" class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:from-purple-600 hover:to-indigo-600 transition-all">Meet Our Team</a>
+        </div>
+    </div>
+
+    <!-- Statistics Section -->
+    <div class="bg-[#5b3b61] rounded-3xl p-8 mb-8 flex flex-col sm:flex-row justify-around text-center text-white shadow-lg">
+        <div class="my-4">
+            <h3 class="text-4xl font-bold">1586</h3>
+            <p class="text-sm">Session Per Year</p>
+        </div>
+        <div class="my-4">
+            <h3 class="text-4xl font-bold">20</h3>
+            <p class="text-sm">Year Experience</p>
+        </div>
+        <div class="my-4">
+            <h3 class="text-4xl font-bold">5000+</h3>
+            <p class="text-sm">Successful Therapy</p>
+        </div>
+        <div class="my-4">
+            <h3 class="text-4xl font-bold">18</h3>
+            <p class="text-sm">Specialist In Our team</p>
+        </div>
+    </div>
+
+   <!-- Our Services Section -->
+    <div class="bg-[#fef7f9] rounded-3xl p-8 mb-8 shadow-lg">
+        <h2 class="text-4xl font-bold text-center mb-10 text-[#5b3b61]">Our Sevices</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Individual Therapy Card -->
+            <div class="bg-white rounded-3xl p-6 border-2 border-gray-200 shadow-md">
+                <h3 class="text-xl font-semibold mb-2">Individual Therapy</h3>
+                <div class="flex flex-col items-center justify-center h-48">
+                    <p class="text-blue-500 text-center hover:underline mb-4"><a href="#">Read more</a></p>
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-24 h-24 text-gray-400">
+                        <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.844.593 6.75 6.75 0 0 0-14.81 0 .75.75 0 0 1-.844-.593Z" clip-rule="evenodd" />
+                    </svg> -->
+                    <img src="{% static '\images\single.png' %}"  fill="currentColor" class="w-28 h-28 text-white">
+                </div>
+            </div>
+
+            <!-- Image Card 1 -->
+            <div class="rounded-3xl overflow-hidden shadow-md">
+                <img src="{% static '\images\young-woman-listens-to-counselor.jpg' %}" alt="Individual Therapy Session" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Couples Therapy Card (Purple background) -->
+            <div class="bg-[#6a6aab] rounded-3xl p-6 shadow-md text-white">
+                <h3 class="text-xl font-semibold mb-2">Couples Therapy</h3>
+                <div class="flex flex-col items-center justify-center h-48">
+                    <p class="text-white text-center hover:underline mb-4"><a href="#">Read more</a></p>
+                    <img src="{% static '\images\Screenshot 2025-08-23 155003.png' %}"  fill="currentColor" class="w-28 h-28 text-white">
+                </div>
+            </div>
+
+            <!-- Group Therapy Card -->
+            <div class="bg-white rounded-3xl p-6 border-2 border-gray-200 shadow-md">
+                <h3 class="text-xl font-semibold mb-2">Group Therapy</h3>
+                <div class="flex flex-col items-center justify-center h-48">
+                    <p class="text-blue-500 text-center hover:underline mb-4"><a href="#">Read more</a></p>
+                     <img src="{% static '\images\group-of-people-icon-simple-outline-style-staff-crowd-people-organisation-management-group-meeting-man-business-team-teamwork-concept-thin-line-symbol-illustration-isolated-vector.jpg' %}"  fill="currentColor" class="w-28 h-28 text-white">
+                </div>
+            </div>
+
+            <!-- Image Card 2 -->
+            <div class="rounded-3xl overflow-hidden shadow-md">
+                <img src="{% static '\images\6b4f38eb6dc217eecf8511c7c100fc72-family-young-daughter-therapy-couch_l.jpg' %}" alt="Family Therapy Session" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Family Therapy Card -->
+            <div class="bg-white rounded-3xl p-6 border-2 border-gray-200 shadow-md">
+                <h3 class="text-xl font-semibold mb-2">Family Therapy</h3>
+                <div class="flex flex-col items-center justify-center h-48">
+                    <p class="text-blue-500 text-center hover:underline mb-4"><a href="#">Read more</a></p>
+                    <img src="{% static '\images\Screenshot 2.png' %}"  fill="currentColor" class="w-28 h-28 text-white">
+                </div>
+            </div>
+
+            <!-- Image Card 3 -->
+            <div class="rounded-3xl overflow-hidden shadow-md">
+                <img src="{% static '\images\group_hands_in_circle.jpg' %}" alt="Group Therapy Session" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Online Therapy Card -->
+            <div class="bg-white rounded-3xl p-6 border-2 border-gray-200 shadow-md">
+                <h3 class="text-xl font-semibold mb-2">Online Therapy</h3>
+                <div class="flex flex-col items-center justify-center h-48">
+                    <p class="text-blue-500 text-center hover:underline mb-4"><a href="#">Read more</a></p>
+                    <img src="{% static '\images\Screenshot3.png' %}"  fill="currentColor" class="w-28 h-28 text-white">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Testimonials Section -->
+    <div class="relative bg-gradient-to-r from-blue-100 to-green-100 rounded-3xl p-8 mb-8 shadow-lg">
+        <div class="text-center mb-8">
+            <h3 class="text-lg text-[#5b3b61]">Testimonials</h3>
+            <h2 class="text-5xl font-bold text-[#5b3b61]">What Our Clients Says</h2>
+        </div>
+        
+        <div class="relative flex items-center justify-center">
+            <!-- Previous Button -->
+            <button id="testimonials-prev" class="absolute left-0 z-10 p-3 bg-white rounded-full shadow-lg cursor-pointer hover:bg-gray-100 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            
+            <div id="testimonials-container" class="overflow-hidden w-full">
+                <div id="testimonials-carousel" class="flex transition-transform duration-500 ease-in-out -translate-x-0">
+                    {% for testimonial in testimonials %}
+                    <div class="w-full flex-shrink-0 p-4">
+                        <div class="flex flex-col items-center text-center">
+                            <img src="{{ testimonial.client_image.url }}" alt="{{ testimonial.client_name }}" class="w-32 h-32 rounded-full object-cover mb-4">
+                            <h3 class="text-lg font-semibold">{{ testimonial.client_name }}</h3>
+                            <p class="text-gray-600 mt-2 italic">"{{ testimonial.testimonial_text }}"</p>
+                        </div>
+                    </div>
+                    {% empty %}
+                    <p>No testimonials available.</p>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Next Button -->
+            <button id="testimonials-next" class="absolute right-0 z-10 p-3 bg-white rounded-full shadow-lg cursor-pointer hover:bg-gray-100 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+        
+        <div class="flex justify-center mt-8 space-x-2">
+            {% for testimonial in testimonials %}
+            <span id="dot-{{ forloop.counter0 }}" class="dot w-3 h-3 bg-purple-300 rounded-full cursor-pointer hover:bg-purple-500"></span>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <script>
+        // Testimonials Carousel Logic
+        const testimonialsCarousel = document.getElementById('testimonials-carousel');
+        const testimonialsPrev = document.getElementById('testimonials-prev');
+        const testimonialsNext = document.getElementById('testimonials-next');
+        const testimonialDots = document.querySelectorAll('#testimonials-section .dot');
+        const testimonialItems = document.querySelectorAll('#testimonials-carousel > div');
+        let testimonialsIndex = 0;
+
+        function updateTestimonialsCarousel() {
+            const offset = -testimonialsIndex * 100;
+            testimonialsCarousel.style.transform = `translateX(${offset}%)`;
+            
+            testimonialDots.forEach((dot, index) => {
+                if (index === testimonialsIndex) {
+                    dot.classList.remove('bg-purple-300');
+                    dot.classList.add('bg-purple-600');
+                } else {
+                    dot.classList.remove('bg-purple-600');
+                    dot.classList.add('bg-purple-300');
+                }
+            });
+        }
+        
+        testimonialsPrev.addEventListener('click', () => {
+            testimonialsIndex = (testimonialsIndex > 0) ? testimonialsIndex - 1 : testimonialItems.length - 1;
+            updateTestimonialsCarousel();
+        });
+
+        testimonialsNext.addEventListener('click', () => {
+            testimonialsIndex = (testimonialsIndex < testimonialItems.length - 1) ? testimonialsIndex + 1 : 0;
+            updateTestimonialsCarousel();
+        });
+
+        testimonialDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                testimonialsIndex = index;
+                updateTestimonialsCarousel();
+            });
+        });
+
+        window.addEventListener('load', updateTestimonialsCarousel);
+        window.addEventListener('resize', updateTestimonialsCarousel);
+    </script>
+    
+    <!-- Our Team Section -->
+    <div class="container mx-auto px-4 py-8 bg-[#fdf2f8] rounded-3xl mb-8">
+        <div class="text-center mb-8">
+            <h3 class="text-lg text-[#d1b7d5]">Meet Our Therapist</h3>
+            <h2 class="text-5xl font-bold text-[#5b3b61]">Our Team</h2>
+        </div>
+        
+        <div class="relative flex items-center justify-center gap-6">
+            <div id="team-carousel-prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 p-3 bg-white rounded-full shadow-lg cursor-pointer hover:bg-gray-100">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </div>
+            
+            <div id="team-carousel-container" class="overflow-hidden w-full">
+                <div id="team-carousel" class="flex transition-transform duration-500 ease-in-out -translate-x-0">
+                    {% for member in team_members %}
+                        <div class="w-full sm:w-1/2 md:w-1/4 flex-shrink-0 p-4">
+                            <div class="bg-white p-4 rounded-2xl shadow-md text-center border-2 border-green-200">
+                                <img src="{{ member.image.url }}" alt="{{ member.name }}" class="w-40 h-40 mx-auto rounded-xl object-cover mb-4">
+                                <h3 class="text-lg font-semibold text-[#5b3b61]">{{ member.name }}</h3>
+                                <p class="text-sm text-gray-500">{{ member.title }}</p>
+                            </div>
+                        </div>
+                    {% empty %}
+                        <p>No team members available.</p>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div id="team-carousel-next" class="absolute right-0 top-1/2 transform -translate-y-1/2 p-3 bg-white rounded-full shadow-lg cursor-pointer hover:bg-gray-100">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="flex justify-center mt-8 space-x-2">
+            {% for member in team_members %}
+                <span id="dot-{{ forloop.counter0 }}" class="dot w-3 h-3 bg-purple-300 rounded-full cursor-pointer hover:bg-purple-500"></span>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <!-- JavaScript for carousel functionality -->
+    <script>
+        const carousel = document.getElementById('team-carousel');
+        const prevButton = document.getElementById('team-carousel-prev');
+        const nextButton = document.getElementById('team-carousel-next');
+        const dots = document.querySelectorAll('.dot');
+        const items = document.querySelectorAll('#team-carousel > div');
+        let currentIndex = 0;
+        let itemsPerView = 4; // Default for large screens
+
+        function updateItemsPerView() {
+            if (window.innerWidth >= 1024) { // Large screens
+                itemsPerView = 4;
+            } else if (window.innerWidth >= 768) { // Medium screens
+                itemsPerView = 2;
+            } else { // Small screens
+                itemsPerView = 1;
+            }
+        }
+
+        function updateCarousel() {
+            const offset = -currentIndex * (100 / itemsPerView);
+            carousel.style.transform = `translateX(${offset}%)`;
+            
+            dots.forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.classList.remove('bg-purple-300');
+                    dot.classList.add('bg-purple-600');
+                } else {
+                    dot.classList.remove('bg-purple-600');
+                    dot.classList.add('bg-purple-300');
+                }
+            });
+        }
+        
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : Math.floor(items.length / itemsPerView) - 1;
+            updateCarousel();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex < Math.floor(items.length / itemsPerView) - 1) ? currentIndex + 1 : 0;
+            updateCarousel();
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel();
+            });
+        });
+
+        // Initialize carousel on window load and resize
+        window.addEventListener('load', () => {
+            updateItemsPerView();
+            updateCarousel();
+        });
+        window.addEventListener('resize', () => {
+            updateItemsPerView();
+            updateCarousel();
+        });
+
+    </script>
+
+    <!-- Latest Articles Section -->
+    <h2 class="text-3xl font-bold text-center mt-8 mb-4 text-[#5b3b61]">From the Blog<br>Latest Articles</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        {% for article in articles %}
+        <div class="bg-[#e3ffd4] rounded-2xl shadow-md p-6 border border-gray-200 text-center">
+            <img src="{{ article.image.url }}" alt="{{ article.title }}" class="rounded-lg w-full h-auto mb-4">
+            <p class="text-xs text-gray-500 mb-2">News | {{ article.date|date:"F d Y" }}</p>
+            <h3 class="font-semibold text-lg mb-2 ">{{ article.title }}</h3>
+            <a href="#" class="text-indigo-500 hover:underline text-sm">Read more</a>
+        </div>
+        {% empty %}
+        <p>No articles available.</p>
+        {% endfor %}
+    </div>
+
+    <!-- FAQs Section -->
+    <h2 class="text-3xl font-bold text-center mt-8 mb-4 text-[#5b3b61]">FAQs</h2>
+    <div class="space-y-4 mb-8">
+        {% for faq in faqs %}
+        <div class="bg-white rounded-lg shadow-md">
+            <button class="w-full text-left p-4 flex justify-between items-center text-lg font-medium text-gray-800 focus:outline-none">
+                <span>{{ faq.question }}</span>
+                <span>+</span>
+            </button>
+            <div class="px-4 pb-4 hidden">
+                <p>{{ faq.answer }}</p>
+            </div>
+        </div>
+        {% empty %}
+        <p>No FAQs available.</p>
+        {% endfor %}
+    </div>
+
+    <script>
+        // JavaScript for FAQ accordion functionality
+        document.querySelectorAll('.bg-white.rounded-lg').forEach(item => {
+            const button = item.querySelector('button');
+            const answer = item.querySelector('div');
+            button.addEventListener('click', () => {
+                const isHidden = answer.classList.contains('hidden');
+                document.querySelectorAll('.bg-white.rounded-lg div').forEach(div => {
+                    div.classList.add('hidden');
+                    div.previousElementSibling.querySelector('span:last-child').textContent = '+';
+                });
+                if (isHidden) {
+                    answer.classList.remove('hidden');
+                    button.querySelector('span:last-child').textContent = '-';
+                }
+            });
+        });
+    </script>
+{% endblock %}
